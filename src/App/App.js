@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import SideMenu from "../components/SideMenu";
-import { makeStyles } from "@material-ui/core";
+import { CssBaseline, makeStyles } from "@material-ui/core";
 import Header from "../components/Header";
 
 const useStyles = makeStyles({
@@ -20,6 +20,7 @@ function App() {
       <div className={classes.appMain}>
         <Header></Header>
       </div>
+      <CssBaseline />
     </>
   );
 }
