@@ -13,19 +13,23 @@ import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import PowerSettingsNewIcon from "@material-ui/icons/PowerSettingsNew";
 import SearchIcon from "@material-ui/icons/Search";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: "#fff",
+    // transform: 'translateZ(0)'
   },
   searchInput: {
     opacity: "0.6",
-    padding: "0px 8px",
+    padding: `0px ${theme.spacing(1)}px`,
     fontSize: "0.8rem",
-    "&:hover": {
-      backgroundColor: "#f2f2f2",
+    '&:hover': {
+      backgroundColor: "#f2f2f2"
     },
-  },
-});
+    '& .MuiSvgIcon-root': {
+      marginRight: theme.spacing(1)
+    }
+  }
+}));
 
 export default function Header() {
   const classes = useStyles();
